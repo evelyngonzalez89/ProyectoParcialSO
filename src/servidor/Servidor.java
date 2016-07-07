@@ -10,7 +10,7 @@ import java.net.ServerSocket;
 
 /**
  *
- * @author Jessica
+ * @author Evelyn Gonzalez
  */
 public class Servidor {
 
@@ -20,42 +20,31 @@ public class Servidor {
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = null;
         boolean listening = true;
-        int port;
-    	port = Integer.parseInt(args[0]); 
+        int port = 0;
+        if (args.length>0 && args[0] != null) {
+            try {
+                port = Integer.parseInt(args[0]);
+            } catch (Exception e) {
+                System.out.println("ERROR: Puerto invalido");
+                System.exit(0);
+            }
+        } else {
+            System.out.println("ERROR: Debe enviar el puerto");
+            System.exit(0);
+        }
 
         try {
             serverSocket = new ServerSocket(port);
         } catch (IOException e) {
-            System.err.println("No esta escuchando en el Puerto: "+port);
+            System.err.println("No esta escuchando en el Puerto: " + port);
             System.exit(-1);
         }
-        
-        while (listening) 
-        {
-            /*try
-            {
-            	 /*System.out.println("Esperando conexion");
-                 // Wait here and listen for a connection
-                 Socket s1 = serverSocket.accept();
-                 // Get output stream associated with the socket
-                 OutputStream s1out = s1.getOutputStream();
-                 DataOutputStream dos = new DataOutputStream(s1out);
-                 // Send your string!
-                 dos.writeUTF("Hello Net World!");
-                 // Close the connection, but not the server socket
-                 dos.close();
-                 s1.close();
-            } 
-            catch (IOException e) 
-            { 
-                e.printStackTrace();
-            }*/
-        	System.out.println("Esperando conexion");
-    	    new KKMultiServerThread(serverSocket.accept()).start();
-        } //end of while
 
-
+        while (listening) {
+            System.out.println("Esperando conexion");
+            new KKMultiServerThread(serverSocket.accept()).start();
+        }
         serverSocket.close();
     }
-    
+
 }

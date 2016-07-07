@@ -6,9 +6,11 @@ import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class KKMultiServerThread extends Thread {
-    private Socket socket = null;
 
+ public class KKMultiServerThread extends Thread {
+    private Socket socket = null;
+    private static final int MAX_ARRAY_SIZE = 128;
+    private static final int MAX_ARRAY_SIZE_VAL = 2048;
     public KKMultiServerThread(Socket socket) {
 	super("KKMultiServerThread");
 	this.socket = socket;
@@ -24,58 +26,35 @@ public class KKMultiServerThread extends Thread {
 				    socket.getInputStream()));
 
 	    String inputLine, outputLine;
-	    //KnockKnockProtocol kkp = new KnockKnockProtocol();
-	    //outputLine = kkp.processInput(null);
-	    //out.println(outputLine);
 	    KVKeyValuehasp kvKeyValuehasp= new KVKeyValuehasp();
-	    out.println("Bienvenido");
+	    //out.println("Bienvenido KEY / VALUE");
 	    while ((inputLine = in.readLine()) != null) {
-		String [] comando = inputLine.split(" ");
-		
-		if(comando[0]==null || comando[0].equals("")){
-			out.println("Debe insertar un comando, help para ayuda");
-		} else if(comando[0].equals("put")){
-			if(comando[1]==null || comando[1].equals("") || comando[2] == null || comando[2].equals("")){
-				out.println("Debe insertar el key y el value: put key value");
-			} else{
-				kvKeyValuehasp.putKeyValue(comando[1], comando[2]);
-				out.println("Ingresado correctamente");
-			}
-		} else if(comando[0].equals("get")){
-			if(comando[1]==null || comando[1].equals("")){
-				out.println("Debe insertar el key: get key");
-			} else{
-				out.println(kvKeyValuehasp.getKeyValue(comando[1].trim()));
-			}
-		} else if(comando[0].equals("del")){
-			if(comando[1]==null || comando[1].equals("")){
-				out.println("Debe insertar el key: del key");
-			} else{
-				kvKeyValuehasp.delKeyValue(comando[1].trim());
-				out.println("Eliminado correctamente");
-			}
-		} else if(comando[0].equals("list")){
+		String [] comando = inputLine.split("\\s+");//Valida mas de un espacio
+                if(comando[0].toUpperCase().equals("SET")){//Soporta mayusculas y minusculas
+	            kvKeyValuehasp.putKeyValue(comando[1], comando[2]);
+                    out.println("OK");
+		} else if(comando[0].toUpperCase().equals("GET")){
+		    if(kvKeyValuehasp.getKeyValue(comando[1].trim())!=null){
+                        out.println(comando[1]+" = "+kvKeyValuehasp.getKeyValue(comando[1].trim()));
+                    }else{
+                        out.println(comando[1]+" = ");
+                    }	
+		} else if(comando[0].toUpperCase().equals("DEL")){//Soporta mayusculas y minusculas
+                        kvKeyValuehasp.delKeyValue(comando[1].trim());
+			out.println("OK");
+		} else if(comando[0].toUpperCase().equals("LIST")){ //Soporta mayusculas y minusculas
 			Set<String> keys=kvKeyValuehasp.getListKeyValue();
 			String key="";
                         for (String s : keys) {
-				key=key.concat(s+ "  ");
+				key=key.concat(s+ " \t");
                         }
                         out.println(key);
-		} else if (comando[0].equals("help")){
-		    out.println("==========================================");
-		    out.println("Debe insertar un comando, help para ayuda");
-		    out.println("Debe insertar un comando, help para ayuda");
-		    out.println("==========================================");
-                } else if (comando[0].equals("exit")){
-		    break;
-                } else{
-                    out.println("Debe insertar un comando, help para ayuda");
+		} else{
+                    out.println("ERROR: Debe insertar un comando, help para ayuda");
                 }
-	    }
-	    
-
+            }
 	} catch (IOException e) {
-	    e.printStackTrace();
+	    //e.printStackTrace();
 	} finally{
             try {
                 out.close();
