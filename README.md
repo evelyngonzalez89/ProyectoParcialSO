@@ -3,6 +3,10 @@ Aplicación cliente­servidor utilizando comunicaciones con sockets.
 Este Aplicación fue hecho para ESPOL Sistemas Operativos estan libres de copiarlo y usarlo
 
 Para poder ejecutar el Cliente:
+
+
+
+
 1.-En la Carpeta JarCliente_Servidor se encuentrar los .jar tanto del cliente como del Servidor. Una vez descargados, para el 
 CLIENTE
    Por medio del terminal nos situamos en el directorio del .jar descargado y para ejecutarlo se ingresa: 
