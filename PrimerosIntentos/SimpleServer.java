@@ -5,10 +5,12 @@ public class SimpleServer
     public static void main(String args[]) 
     {
         ServerSocket s;
+	int puerto;
         // Register service to port 5432 or anyother number
         try
         {
-            s = new ServerSocket(5432);
+	    puerto = Integer.parseInt(args[0]);
+            s = new ServerSocket(puerto);
         } 
         catch (IOException e) 
         {
