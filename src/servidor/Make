@@ -1,0 +1,3 @@
+all:
+	javac *.java	
+	jar -cf Servidor.jar Servidor.class
