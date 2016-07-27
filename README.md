@@ -10,11 +10,11 @@ INTEGRANTES:
 
 DESCRIPCIÓN:
 
-El almacenamiento de clave-valor es un tipo de base NoSQL usa una matriz asociativa en nuestro caso para el almacenamiento en memoria usamos Hashmap como el modelo de datos fundamentales, donde cada clave está asociada con un único valor de una colección. Esta relación se conoce como un par clave-valor.
+Realizaremos un Sistema de almacenamiento de clave-valor es un tipo de base NoSQL usa una matriz asociativa en nuestro caso para el almacenamiento en memoria usamos Hashmap como el modelo de datos fundamentales, donde una clave es asociada con un único valor de una colección.
 
-METODOLOGÍA
+METODOLOGÍA:
 
-Aplicación cliente­servidor utilizando comunicaciones con sockets. El protocolo de conexión TCP fue implementado con las clases Socket y ServerSocket, las cuales son librerías de Java.
+En el desrrollo de una aplicación cliente­servidor utilizando comunicaciones con sockets. El protocolo de conexión TCP fue implementado con las clases Socket y ServerSocket, las cuales son librerías de Java.
 
 Key-value store en su diseño e implementación que permitirá a uno o más clientes conectarse con el key-value store en memoria. Se utilizó una base de datos NoSQL para el almacenamiento de las claves con sus respectivos valores.
 
