@@ -28,22 +28,23 @@ Para poder ejecutar el Cliente:
 EJECUCIÓN EN LINUX
 
     
-
-
-
 1.-En la Carpeta JarCliente_Servidor se encuentrar los .jar tanto del cliente como del Servidor. Una vez descargados, para el 
 CLIENTE
    Por medio del terminal nos situamos en el directorio del .jar descargado y para ejecutarlo se ingresa: 
       (Directorio destino....)/java -jar Cliente.jar IP PUERTO
       
-  Para ejecutar el cliente y que lee los comandos desde un archivo.txt es el mismo procedimiento de abrir la terminal en el directorio donde se encuentra el.jar pero e comando que colocaremos será:
+   Para ejecutar el cliente y que lee los comandos desde un archivo.txt es el mismo procedimiento de abrir la terminal en el directorio donde se encuentra el.jar pero e comando que colocaremos será:
       cat nombrearchivo.txt| java  -jar Cliente.jar IP PUERTO
  
 MAKE
 
 Luego de descargar el proyecto completo, en una carpeta nueva (por comodidad) extraer el archivo "cliente" de la ruta: ProyectoParcialSO/tree/master/Cliente/src/cliente Hacer lo mismo para la carpeta "servidor" y pegarla en la misma carpeta nueva.
 Abrir el terminal, y acceder a la misma ruta donde se ha creado la nueva carpeta. Primero entrar al directorio cliente y ejecutar el comando: make De igual manera acceder al directorio servidor, y ejecutar el mismo comando.
-Para ejecutar el servidor: Acceder desde un terminal a la ruta de la carpeta nueva > servidor. Y dentro de este directorio ejecutar el comando: java -cp ../ servidor.MainServidor #PORT Repetir el mismo paso desde otro servidor para ejecutar el cliente, con el comando: java -cp ../ cliente.Cliente #HOST #PORT Nota: El host puede ser el localhost, y #PORT puede ser cualquier número de puerto.
+Para ejecutar el servidor: Acceder desde un terminal a la ruta de la carpeta nueva > servidor. 
+        (Directorio destino....)/java -jar Cliente.jar #PUERTO
+      
+Para ejecutar el cliente y que lee los comandos desde un archivo.txt es el mismo procedimiento de abrir la terminal en el directorio donde se encuentra el.jar pero e comando que colocaremos será:
+      cat nombrearchivo.txt| java  -jar Cliente.jar #IP #PUERTO Repetir el mismo paso desde otro servidor para ejecutar el cliente, con el comando: java -jar Cliente.jar #IP #PUERTO Nota: El host puede ser el localhost, y #PORT puede ser cualquier número de puerto.
     
  NOTA: EL archivo de comandos que envía el cliente debe estar en el mismo directorio del .jar Cliente
  Los print de pantalla se encuentran el documento que se presenta dentro de la carpeta Documentación
