@@ -55,7 +55,10 @@ Para nuestro proyecto procedemos a la instalación de los paquetes a continuaci�
 
 a.  Maven: que es una herramienta de software para la gestión y construcción de proyectos.
     Ruta: https://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/
+    
 b.  YCSB: Gestor de las pruebas automatizadas, un servicio para realizar pruebas de rendimiento a distintas base de datos. 
     Ruta: https://github.com/brianfrankcooper/YCSB/wiki/Getting-Started
+    
 c.  REDIS: Motor de base de datos en memoria, basado en el almacenamiento en tablas de hashes (clave/valor) pero que opcionalmente puede ser usada como una base de datos durable o persistente.
     Ruta: https://www.digitalocean.com/community/tutorials/how-to-configure-a-redis-cluster-on-ubuntu-14-04
+    
