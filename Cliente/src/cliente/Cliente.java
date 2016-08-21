@@ -78,14 +78,14 @@ public class Cliente {
                 try {
                     while ((fromServer = in.readLine()) != null) {
                         System.out.println("Server: " + fromServer);
-                        System.out.println("Ingrese el comando ó 'help' para ayuda");
+                        System.out.println("-----------------------------------------------");
                         break;
                     }
                 } catch (SocketException se) {
                     System.out.println("ERROR: Problemas de conexion con el servidor");
                 }
             }
-            System.out.println("Ingrese el comando ó 'help' para ayuda");
+            System.out.println("-----------------------------------------------");
         }
 
         out.close();

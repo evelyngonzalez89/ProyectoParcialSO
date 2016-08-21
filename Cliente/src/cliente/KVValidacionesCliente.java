@@ -86,32 +86,6 @@ public class KVValidacionesCliente {
             } else if (comando[0].toUpperCase().equals("LIST")) { //Soporta mayusculas y minusculas
                 inputLineRet = inputLine;
             } else if (comando[0].toUpperCase().equals("HELP")) {//Soporta mayusculas y minusculas
-                /*String nl = System.getProperty("line.separator");
-                 //Lanzamos el mensaje:
-                 JOptionPane.showMessageDialog(null, "AYUDA KEY VALUE STORE"
-                        
-                 + nl + "set key value ..."
-                 + nl + "Almacena (en memoria) la clave, con el valor\n"
-                 + "asociado. El valor puede contener cualquier\n"
-                 + "caracter, incluso caracteres especiales, tabs\n"
-                 + "y espaciones en blanco. "
-                 + nl + ""
-                 + nl + "del key  ..."
-                 + nl + "Elimina la clave, con su valor asociado.."
-                 + nl + ""
-                 + nl + "list ..."
-                 + nl + "Retorna la lista de todas las claves\n"
-                 + "almacenadas. NO retorna los valores\n"
-                 + "asociados a dichas claves."
-                 + nl + ""
-                 + nl + "exit  ..."
-                 + nl + "Termina la conexión con el servidor y\n"
-                 + "posteriormente, termina ejecución del\n"
-                 + "programa cliente. OJO: Este NO es un\n"
-                 + "comando soportado por el servidor; es un\n"
-                 + "comando soportado por el programa cliente..");
-
-                 // out.println("Inserte un nuevo comando");*/
                 out.println("===================================================");
                 out.println("============== KEY / VALUE  STORE =================");
                 out.println("===================================================");
