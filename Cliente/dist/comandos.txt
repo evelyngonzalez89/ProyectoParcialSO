@@ -1,8 +1,0 @@
-set karen andrea
-set 1 gracias
-set julio francia
-set gato  gata
-get karen
-get 1
-list
-help

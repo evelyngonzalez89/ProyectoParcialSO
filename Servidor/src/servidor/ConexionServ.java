@@ -16,8 +16,8 @@ import java.net.Socket;
 
 public class ConexionServ
 {
-    protected int PUERTO = 1234; //Puerto para la conexión por default
-    protected String HOST = "localhost"; //Host para la conexión por default
+    protected int PUERTO = 1234; //Puerto para la conexión
+    protected String HOST = "localhost"; //Host para la conexión
     protected String mensajeServidor; //Mensajes entrantes (recibidos) en el servidor
     protected ServerSocket ss; //Socket del servidor
     protected Socket cs; //Socket del cliente
@@ -45,5 +45,4 @@ public class ConexionServ
             }
         }
     }
-}
-    
+} 

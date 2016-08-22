@@ -10,6 +10,7 @@ package servidor;
  * @author Evelyn Gonzalez
  */
 import java.io.IOException;
+import servidor.ServidorSO;
 
 
 
@@ -18,9 +19,9 @@ public class MainServer
 {
     public static void main(String[] args) throws IOException
     {        
-        Servidor serv = new Servidor(args[0]); //Se crea el servidor
+        ServidorSO servidor = new ServidorSO(args[0]); //Se crea el servidor
         
         System.out.println("Iniciando servidor\n");
-        serv.iniConex(args[0]); //Se inicia el servidor
+        servidor.iniConex(); //Se inicia el servidor
     }
 }
