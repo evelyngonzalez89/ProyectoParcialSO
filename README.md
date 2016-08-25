@@ -62,3 +62,15 @@ b.  YCSB: Gestor de las pruebas automatizadas, un servicio para realizar pruebas
 c.  REDIS: Motor de base de datos en memoria, basado en el almacenamiento en tablas de hashes (clave/valor) pero que opcionalmente puede ser usada como una base de datos durable o persistente.
     Ruta: https://www.digitalocean.com/community/tutorials/how-to-configure-a-redis-cluster-on-ubuntu-14-04
     
+d. Descargado el Repositorio YCSB como nuestro procedemos en consola ejecutar:
+
+    cd /home/steven/Escritorio/ProyectoFinalSO/ProyectoParcialSO/YCSB-master
+    mvn clean package
+    mvn -pl com.yahoo.ycsb:redis-binding -am clean package
+    
+e. Nos ubicamos dentro de nuestro repositorio local y Ejecutamos YCSB:
+
+   cd /home/steven/Escritorio/ProyectoFinalSO/ProyectoParcialSO/YCSB-master
+   ./bin/ycsb shell basic
+   bin/ycsb load basic -P workloads/workload-rp
+   bin/ycsb run basic -P workloads/workload-rp
