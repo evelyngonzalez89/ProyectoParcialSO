@@ -47,8 +47,8 @@ import java.util.Vector;
 
 
 public class KVClienteSO extends DB {
-  public static final String HOST_PROPERTY = "kvclienteso.host";
-  public static final String PORT_PROPERTY = "kvclienteso.port";
+  public static final String HOST_PROPERTY = "KVClienteSO.host";
+  public static final String PORT_PROPERTY = "KVClienteSO.port";
   public DbLayer db;
 
 
