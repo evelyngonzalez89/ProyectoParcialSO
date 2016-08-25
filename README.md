@@ -68,3 +68,9 @@ d. Descargado el Repositorio YCSB como nuestro procedemos en consola ejecutar:
     mvn clean package
     mvn -pl com.yahoo.ycsb:redis-binding -am clean package
     
+e. Nos ubicamos dentro de nuestro repositorio local y Ejecutamos YCSB:
+
+   cd /home/steven/Escritorio/ProyectoFinalSO/ProyectoParcialSO/YCSB-master
+   ./bin/ycsb shell basic
+   bin/ycsb load basic -P workloads/workload-rp
+   bin/ycsb run basic -P workloads/workload-rp
