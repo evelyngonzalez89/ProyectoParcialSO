@@ -74,3 +74,12 @@ e. Nos ubicamos dentro de nuestro repositorio local y Ejecutamos YCSB:
    ./bin/ycsb shell basic
    bin/ycsb load basic -P workloads/workload-rp
    bin/ycsb run basic -P workloads/workload-rp
+   
+f. Comandos mvn para ejecucion del YCSB
+   mvn archetype:generate -DgroupId=com.yahoo.ycsb -DartifactId=KVClienteSO-binding -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+sudo mvn -pl com.yahoo.ycsb:KVClienteSO-binding -am clean package
+
+./bin/ycsb load KVClienteSO-binding -s -P workloads/workloada -p "KVClienteSO.host=127.0.0.1" -p "KVClienteSO.port=6379" > outputLoad.txt
+
+./bin/ycsb run KVClienteSO-binding -s -P workloads/workloada -p "KVClienteSO.host=127.0.0.1" -p "KVClienteSO.port=6379" > outputLoad.txt
