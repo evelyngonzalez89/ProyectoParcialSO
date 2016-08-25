@@ -35,6 +35,7 @@ import com.yahoo.ycsb.DB;
 import com.yahoo.ycsb.DBException;
 import com.yahoo.ycsb.Status;
 import com.yahoo.ycsb.StringByteIterator;
+import com.yahoo.ycsb.Workload; 
 
 
 import java.util.HashMap;
@@ -46,8 +47,8 @@ import java.util.Vector;
 
 
 public class KVClienteSO extends DB {
-  public static final String HOST_PROPERTY = "espol.host";
-  public static final String PORT_PROPERTY = "espol.port";
+  public static final String HOST_PROPERTY = "kvclienteso.host";
+  public static final String PORT_PROPERTY = "kvclienteso.port";
   public DbLayer db;
 
 

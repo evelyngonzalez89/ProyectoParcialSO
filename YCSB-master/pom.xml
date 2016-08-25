@@ -134,9 +134,8 @@ LICENSE file.
     <module>solr</module>
     <module>tarantool</module>
     <!--<module>voldemort</module>-->
-    <module>KVClienteSO</module>
     <module>quickstart</module>
-    <module>KVClienteSO-binding</module>
+    <module>KVClienteSO</module>
   </modules>
 
   <build>
