@@ -36,11 +36,14 @@ public class BaseRedis {
 
     public void iniciarBase() {
         Base.put("1", "1 elemento");
+        Base.put("2", "1 elemento");
+        Base.put("3", "1 elemento");
+        Base.put("4", "1 elemento");
  }
 
     public void iniciarBase2() {
         try {
-            BufferedReader in = new BufferedReader(new FileReader("prueba.txt"));
+            BufferedReader in = new BufferedReader(new FileReader("eve.txt"));
 
             String line;
             String[] values;
@@ -76,9 +79,6 @@ public class BaseRedis {
                 String valor = line;
                 Base.put(nombreArchivo+"."+i, line);
                 System.out.println(line);
-                /*System.out.println(valor);
-                values.add(valor);*/
-                //ThreadServer.salida.println(line);
             }
             //Base.put(nombreArchivo, values);
  
@@ -113,14 +113,10 @@ public class BaseRedis {
                             valor=value.substring(inicio, fin);
                             inicio=fin+1;
                              Base.put(nombreArchivo+"."+k, valor);
-                    //System.out.println(nombreArchivo+"."+k +"  "+ valor);
                     k++;
                             
                         }
                     else break;
-//                    if(i==100){
-//                        System.out.println(i);
-//                    }
                    
                 }
             }
@@ -168,7 +164,7 @@ public class BaseRedis {
                  }
                  if(control == true){
                     control=false;
-                    out.println("Fin resultado - key:");
+                    out.println("Fin ejecución resultado - key:");
                  }
                  //return "";
              }else

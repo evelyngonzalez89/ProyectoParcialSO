@@ -37,11 +37,6 @@ public class ThreadServer extends Thread {
                 control=true;
                 System.out.print("key: " + mentry.getKey() + " & Value: ");
                 System.out.println(mentry.getValue());
-//                if(cont==0){
-//                    out.println(mentry.getValue().toString());
-//                
-//                }else
-//                {
                   out.println("Linea " + mentry.getValue().toString());  
 //                }
 //                cont++;
@@ -59,15 +54,12 @@ public class ThreadServer extends Thread {
             control=false;
             out.println("Fin archivo");
         }
-//        if(cont>1)
-//            out.println("Fin archivo");
-
     }
 
     @Override
     public void run() {
         try {
-            System.out.println("Cliente en linea");
+            System.out.println("Cliente se encuentra conectado");
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             salida = out;
             BufferedReader in = new BufferedReader(
@@ -77,7 +69,7 @@ public class ThreadServer extends Thread {
             int i = 0;
             String claveMap;
 
-            out.println("Te estoy atendiendo en hora buena, dime tu petición. Si desea consulte los comandos disponibles con 'help'");       
+            out.println("Cliente atendido, Si desea consulte los comandos disponibles con 'help'");       
             while ((inputLine = in.readLine()) != null) {
                 inputLine = inputLine.substring(1, inputLine.length() - 1);
                 //   System.out.println(inputLine);

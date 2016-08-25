@@ -33,7 +33,7 @@ public class ContenedorServer {
         }
         if (!contenido.isEmpty()) {
            notify();
-            System.out.println("Contenedor saco de la  cola ");
+            System.out.println("Mensaje Contenedor => Saco de la  cola ");
             return contenido.poll();
         }
         else {
@@ -45,7 +45,7 @@ public class ContenedorServer {
 
         contenido.add(value);
         contenedovacio = Boolean.FALSE;
-        System.out.println("productor puso en cola ");
+        System.out.println("Mensaje Productor => Puesto en cola ");
         notifyAll();
     }
 }

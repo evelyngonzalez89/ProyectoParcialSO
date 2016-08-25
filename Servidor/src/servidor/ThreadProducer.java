@@ -45,10 +45,10 @@ public class ThreadProducer extends Thread {
                 incoming = serversocket.accept();
                 contenedor.put(incoming);
             } catch (Exception ex) {
-                System.out.println("Este servidor ya se encuentra en ejecución");
+                System.out.println("Mensaje Servidor => Se encuentra en ejecución");
                 ServidorSO.validaNumServer=true;
                 break;
-                //Logger.getLogger(ThreadProducer.class.getName()).log(Level.SEVERE, null, ex);
+                
             }
              
              

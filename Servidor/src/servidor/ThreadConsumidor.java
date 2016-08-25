@@ -43,16 +43,7 @@ public class ThreadConsumidor extends Thread {
             } catch (IOException ex) {
                 Logger.getLogger(ThreadConsumidor.class.getName()).log(Level.SEVERE, null, ex);
             }
-//                 try {
-//                socket.close();
-//            } catch (IOException ex) {
-//                Logger.getLogger(ThreadConsumidor.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//                 try {
-//                socket.close();
-//            } catch (IOException ex) {
-//                Logger.getLogger(ThreadConsumidor.class.getName()).log(Level.SEVERE, null, ex);
-//            }
+
 
         }
     }

@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 
-public class ServidorSO extends ConexionServ //Se hereda de conexión para hacer uso de los sockets y demás
+public class ServidorSO extends ConexionServ 
 {
   public static boolean validaNumServer = false;
   private static ContenedorServer contenedor;

@@ -16,7 +16,7 @@ import java.net.Socket;
 
 public class ConexionServ
 {
-    protected int PUERTO = 1234; //Puerto para la conexión
+    protected int PUERTO = 1234; //Estableciendo conexión
     protected String HOST = "localhost"; //Host para la conexión
     protected String mensajeServidor; //Mensajes entrantes (recibidos) en el servidor
     protected ServerSocket ss; //Socket del servidor
@@ -29,19 +29,19 @@ public class ConexionServ
         if(tipo.equalsIgnoreCase("servidor"))
         {
               try {
-                ss = new ServerSocket(PUERTO);//Se crea el socket para el servidor en puerto 1234
-                cs = new Socket(); //Socket para el cliente
+                ss = new ServerSocket(PUERTO);
+                cs = new Socket(); 
             } catch (Exception e) {
-                System.out.println("Este servidor ya esta disponible por el momento");
+                System.out.println("Mensaje Servidor => NO esta disponible por el momento");
             }
         
         }
         else
         {
             try {
-                  cs = new Socket(HOST, PUERTO); //Socket para el cliente en localhost en puerto 1234
+                  cs = new Socket(HOST, PUERTO); 
             } catch (Exception e) {
-                System.out.println("Este servidor no esta disponible por el momento, porfavor intenta mas tarde");
+                System.out.println("Mensaje Servidor => NO esta disponible por el momento, porfavor intenta mas tarde");
             }
         }
     }
