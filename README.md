@@ -66,5 +66,5 @@ d. Descargado el Repositorio YCSB como nuestro procedemos en consola ejecutar:
 
     cd /home/steven/Escritorio/ProyectoFinalSO/ProyectoParcialSO/YCSB-master
     mvn clean package
-    mvn -pl com.yahoo.ycsb:mongodb-binding -am clean package
+    mvn -pl com.yahoo.ycsb:redis-binding -am clean package
     
