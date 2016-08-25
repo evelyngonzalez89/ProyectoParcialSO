@@ -63,6 +63,7 @@ c.  REDIS: Motor de base de datos en memoria, basado en el almacenamiento en tab
     Ruta: https://www.digitalocean.com/community/tutorials/how-to-configure-a-redis-cluster-on-ubuntu-14-04
     
 d. Descargado el Repositorio YCSB como nuestro procedemos en consola ejecutar:
+
     cd /home/steven/Escritorio/ProyectoFinalSO/ProyectoParcialSO/YCSB-master
     mvn clean package
     mvn -pl com.yahoo.ycsb:mongodb-binding -am clean package
